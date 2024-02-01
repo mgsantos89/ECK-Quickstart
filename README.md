@@ -37,14 +37,32 @@ Repositorio Quickstart do Elastic Stack on Kubernetes
     ```
 
 
-- 4 - Deployment do Filebeat
+- 5 - Deployment do Filebeat
 
     ```
     kubectl apply -f filebeat.yaml
     ```
 
-- 5 - Deployment do HeartBeat
+- 6 - Deployment do HeartBeat
 
     ```
     kubectl apply -f heartbeat.yaml
+    ```
+
+
+# Removendo ECK Stack
+
+1 - Remover Recursos ECK em todos os Namespaces
+
+    ```
+    kubectl get namespaces --no-headers -o custom-columns=:metadata.name \
+  | xargs -n1 kubectl delete elastic --all -n
+    ```
+
+
+2 - Remover Operator e CRDS instalados no Cluster
+
+    ```
+        kubectl delete -f https://download.elastic.co/downloads/eck/2.11.1/operator.yaml
+        kubectl delete -f https://download.elastic.co/downloads/eck/2.11.1/crds.yaml
     ```
