@@ -5,7 +5,7 @@ Repositorio Quickstart do Elastic Stack on Kubernetes
 # Stack
     1 Node Funcional ElasticSearch
     1 Kibana Funcional
-    1 Filebeat Coletando as Metricas do meu cluster k8s.
+    1 Filebeat Coletando as Logs do meu cluster k8s.
 
 # Passos
 
