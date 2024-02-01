@@ -6,6 +6,7 @@ Repositorio Quickstart do Elastic Stack on Kubernetes
     1 Node Funcional ElasticSearch
     1 Kibana Funcional
     1 Filebeat Coletando as Logs do meu cluster k8s.
+    1 HeartBeat para Uptime
 
 # Passos
 
@@ -40,4 +41,10 @@ Repositorio Quickstart do Elastic Stack on Kubernetes
 
     ```
     kubectl apply -f filebeat.yaml
+    ```
+
+- 5 - Deployment do HeartBeat
+
+    ```
+    kubectl apply -f heartbeat.yaml
     ```
